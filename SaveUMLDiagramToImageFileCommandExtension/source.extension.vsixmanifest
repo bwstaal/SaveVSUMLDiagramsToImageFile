@@ -14,7 +14,7 @@ Activity Diagram
 
 This extension is the implementation of the code shown in the MSDN article "How to: Export UML Diagrams to Image Files".
 
-A version that is compatible with the 2012 edition (created by Lazzarotto Fabrizio) can be found here: </Description>
+A version that is compatible with the 2012 edition (created by Lazzarotto Fabrizio) can be found here: http://visualstudiogallery.msdn.microsoft.com/e797d512-9a59-4819-b713-b5972b02ce81</Description>
     <Tags>Modeling, Diagrams, UML, Architecture</Tags>
   </Metadata>
   <Installation InstalledByMsi="false" AllUsers="true">

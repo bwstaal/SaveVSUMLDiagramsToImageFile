@@ -3,19 +3,7 @@
   <Metadata>
     <Identity Id="SaveUMLDiagramToImageFileVsix..aa834720-b853-4158-91de-eed40652e2d4" Version="1.0" Language="en-US" Publisher="B.W. Staal" />
     <DisplayName>Save UML Diagram To Image File</DisplayName>
-    <Description xml:space="preserve">Save UML Diagrams To Image Files
-This extension adds the possibility to save UML diagrams, created in Visual Studio Ultimate to the image formats: png, jpg, emf and bmp.
-Supported UML diagrams are:
-
-Class Diagram
-UseCase Diagram
-Sequence Diagram
-Activity Diagram
-Layer Diagram
-
-This extension is the implementation of the code shown in the MSDN article "How to: Export UML Diagrams to Image Files".
-
-A version that is compatible with the 2012 edition (created by Lazzarotto Fabrizio) can be found here: http://visualstudiogallery.msdn.microsoft.com/e797d512-9a59-4819-b713-b5972b02ce81</Description>
+    <Description xml:space="preserve">Save UML Diagrams To Image Files</Description>
     <PreviewImage>PreviewImage.png</PreviewImage>
     <Tags>Modeling, Diagrams, UML, Architecture</Tags>
   </Metadata>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="64c1490f-dc29-47e4-ab3b-413ab3ab99f7" name="UMLComponentDiagram" linkedPackageId="d4c8bb4e-ac98-411d-b980-a9dd13fc06bb" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="8fa02141-02d9-451f-8d2a-0e115c981d03">
+      <profileInstance Id="cfc1cdd8-047a-4d21-a670-3b50d33bba4c" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="4f07563f-99a2-43ef-93f2-dc4aab43ac6a">
+      <profileInstance Id="57ca47d7-3422-41f5-89bc-0766ce82f03f" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="2b98e501-59f9-4234-8e43-48b0d5cbed79" name="Webshop" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6755bcc2-5cf7-46da-ad84-45d4b8593708" />
+        <suppliersInternal>
+          <dependency Id="7b71a0d5-8cdc-4bf3-9531-35e1822e5a77">
+            <componentMoniker Id="ab446b77-630d-462b-9ca8-60beb4b19ca6" LastKnownName="Customer" />
+            <elementDefinition Id="a7b82ddb-033c-4a9c-b29c-7c89de912f1c" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="ab446b77-630d-462b-9ca8-60beb4b19ca6" name="Customer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d41c81f8-5ad4-4067-9c0c-f1494c2608a4" />
+      </component>
+    </componentModelHasComponents>
+  </packagedElements>
+  <package Id="d4c8bb4e-ac98-411d-b980-a9dd13fc06bb" name="TestModelingProject">
+    <elementDefinition Id="40f9a903-40e0-40a6-bcc0-676063fffb74" />
+  </package>
+</componentModel>

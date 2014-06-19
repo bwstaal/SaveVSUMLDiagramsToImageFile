@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="51e1eb6b-29fa-4d4c-9ae3-20cc480aaf2e" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="8171e9b7-53e0-4df3-a506-6b95e378ecdf" name="Layer 1">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="d5d6be85-829f-4a7d-aa50-0f768d251c15" direction="Forward">
+          <layerMoniker Id="192c1a1b-20a7-4546-8d88-aabca0d0891f" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="192c1a1b-20a7-4546-8d88-aabca0d0891f" name="Layer 2&#xD;&#xA;">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="6b45c1f7-238a-4db7-9680-c213ae1116be" direction="Forward">
+          <layerMoniker Id="59646e2a-0f4c-453e-ab46-5de7d9e1d672" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="59646e2a-0f4c-453e-ab46-5de7d9e1d672" name="Layer 3">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="980eb5cb-bd83-4182-9f56-176efe37a1e5" direction="Forward">
+          <layerMoniker Id="202eda06-a815-4b0a-b5a1-211f159798bd" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="202eda06-a815-4b0a-b5a1-211f159798bd" name="Layer 4" />
+  </layers>
+</layerModel>

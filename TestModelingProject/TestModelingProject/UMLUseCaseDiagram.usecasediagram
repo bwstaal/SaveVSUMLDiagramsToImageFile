@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="f2df0e8b-d8b6-4159-a1ef-f55ae94cb7f4" name="UMLUseCaseDiagram" linkedPackageId="fa2bf622-7b01-418e-ae23-b0f26af68414" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="7330f02c-709d-4987-a731-5ca249a12e23">
+      <profileInstance Id="2ef52a7b-a92d-4ac7-86cb-8eb28f5ff9b4" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="51d1a5b2-5d1e-464c-a8ab-afb2e2e3cb0c">
+      <profileInstance Id="a7a6a14b-a9cf-4ae8-a638-b33da0c82ff2" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="6ca05051-4f11-49f9-9296-4ac0e13ae3f0" name="Webshop" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="bc97f18c-c9a5-4f57-9412-9fc80ecfeee7" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="bb9c1a76-cd31-44bd-85e7-8eca814727be" name="Place order" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="abe8bc63-1d70-4608-aea3-d01f68f08637" />
+        <subjects>
+          <subsystemMoniker Id="6ca05051-4f11-49f9-9296-4ac0e13ae3f0" LastKnownName="Webshop" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="a3a9cb11-3db0-4dc0-9ac7-2817f29ce549" name="Customer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="96dba4e8-e424-4ff4-92ff-b4fbdd61018f" />
+        <targetEnds>
+          <association Id="29961dd3-e1be-42bc-bc8d-326ce8d87cd3" isDerived="false" sourceEndRoleName="Customer" targetEndRoleName="Search for products" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a98d5752-a429-4c4b-9cfc-001b8dbf5f66" LastKnownName="Search for products" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="44649bc0-c38b-4002-adee-67c8e3316460" name="Customer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ea0ccfe0-de0d-4501-8521-c87652c4efe7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="632d5a5f-d37f-498a-b241-bbf54eeaafe9" name="Search for products" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e2c047e3-74e3-4c2d-b33d-ae6b0274ce62" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e0ffbec0-70bf-4359-a6fa-3576ec3933a8" />
+          </association>
+          <association Id="cb9230fd-f4fa-44f8-b135-b2d95863199f" isDerived="false" sourceEndRoleName="Customer" targetEndRoleName="Place order" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bb9c1a76-cd31-44bd-85e7-8eca814727be" LastKnownName="Place order" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="462559ab-b6ae-4b00-b377-8d7cc8772b4d" name="Customer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6e7575b4-96d2-4f95-ab55-4c2d1ab8b5ae" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1bc28cbc-d6fa-4b23-b1b7-e54ba143bfcf" name="Place order" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a4064287-4f96-4ef6-839d-87a9066473bf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8cef109d-aa34-480b-8457-c634ad5940d2" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="a98d5752-a429-4c4b-9cfc-001b8dbf5f66" name="Search for products" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="32605c10-0498-4135-9539-05c6431b773d" />
+        <subjects>
+          <subsystemMoniker Id="6ca05051-4f11-49f9-9296-4ac0e13ae3f0" LastKnownName="Webshop" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="fa2bf622-7b01-418e-ae23-b0f26af68414" name="TestModelingProject">
+    <elementDefinition Id="40f9a903-40e0-40a6-bcc0-676063fffb74" />
+  </package>
+</useCaseModelRoot>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="44acf7b9-a0c3-43f1-9a9f-914c48666443" name="Activity" linkedPackageId="6f41fa16-fa09-419e-95f0-190503537280" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="ef2124c1-3a0e-468d-9e4a-2aafd0c34c61">
+      <profileInstance Id="d9774624-cfd1-45eb-8c46-9875cd86e621" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="9eb83c83-67cd-4973-9ea4-b7f153dca7b4">
+      <profileInstance Id="98ac108f-7610-4525-b783-11ca270a7b2e" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="4c38adf8-e56f-4c9c-9877-e32e30ba28fb" name="Activity" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="537ab665-bfa1-418b-bb2c-c9395005f0c0" />
+        <nodes>
+          <initialNode Id="264945c7-0ca0-4b6f-a4ed-d5a28cde1719" name="Initial1" isLeaf="false">
+            <elementDefinition Id="09a185af-adbe-4e36-b30c-7cdfc0832df9" />
+            <flowNodeTargets>
+              <controlFlow Id="2ce64234-2df3-4189-bcc3-1f95f678a90b" isLeaf="false">
+                <opaqueActionMoniker Id="101e077d-ce44-4bb0-b159-a9f0b2385fcb" LastKnownName="Have an idea" />
+                <elementDefinition Id="52d3cb82-d639-4d71-9251-bbaaa4171238" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="101e077d-ce44-4bb0-b159-a9f0b2385fcb" name="Have an idea" isLeaf="false">
+            <elementDefinition Id="ff68c57b-95db-4aeb-a0b2-6c00df6725c3" />
+            <flowNodeTargets>
+              <controlFlow Id="0072ebbb-d873-44a9-b4c8-7e7496f5b2cd" isLeaf="false">
+                <opaqueActionMoniker Id="180784b2-be9e-4385-9883-240add6374e4" LastKnownName="Make a design" />
+                <elementDefinition Id="80b126b1-2e22-41ca-8be4-2ace18687d98" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="180784b2-be9e-4385-9883-240add6374e4" name="Make a design" isLeaf="false">
+            <elementDefinition Id="e242b273-8938-4cb3-b89b-e607f9bca44c" />
+            <flowNodeTargets>
+              <controlFlow Id="a927c490-bb3c-4715-9625-7228fbec114e" isLeaf="false">
+                <opaqueActionMoniker Id="4e956d72-080c-4ad0-8716-f8c0d149646e" LastKnownName="Implement the design" />
+                <elementDefinition Id="62cf6432-92b3-45cd-982a-bfe1abe8081b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="4e956d72-080c-4ad0-8716-f8c0d149646e" name="Implement the design" isLeaf="false">
+            <elementDefinition Id="96f93f8d-8c04-40c6-8aea-cf78da54a216" />
+            <flowNodeTargets>
+              <controlFlow Id="a455d196-c880-4b23-b747-ba89fb974728" isLeaf="false">
+                <opaqueActionMoniker Id="ba3c8ae9-9f90-4c81-97b5-3a41e7287d58" LastKnownName="Test the design" />
+                <elementDefinition Id="65ff79c2-58d1-47fc-bd89-2bc543e98287" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="ba3c8ae9-9f90-4c81-97b5-3a41e7287d58" name="Test the design" isLeaf="false">
+            <elementDefinition Id="4441dfec-1f47-4230-8a90-12d071330f90" />
+            <flowNodeTargets>
+              <controlFlow Id="b7b31606-c0f0-413e-a885-24bbcaccbd6e" isLeaf="false">
+                <opaqueActionMoniker Id="5814d5f8-cf84-44e1-9ce3-e7eb099eca38" LastKnownName="Ship it" />
+                <elementDefinition Id="d8f9b2e2-4484-49b4-96ac-7f17ae9bef75" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="5814d5f8-cf84-44e1-9ce3-e7eb099eca38" name="Ship it" isLeaf="false">
+            <elementDefinition Id="3eade403-a919-4982-8c45-c26b9a327492" />
+            <flowNodeTargets>
+              <controlFlow Id="88aaf5c7-b367-4d8d-bb4b-6ccfe999574c" isLeaf="false">
+                <activityFinalNodeMoniker Id="d8049650-a263-4867-a114-1b5c75e08b3d" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="59fe5977-95a1-46db-8ecc-476bc876ab67" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="d8049650-a263-4867-a114-1b5c75e08b3d" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="92b7b196-37b5-4ee8-8b0c-8ae6f1437a52" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="6f41fa16-fa09-419e-95f0-190503537280" name="TestModelingProject">
+    <elementDefinition Id="40f9a903-40e0-40a6-bcc0-676063fffb74" />
+  </package>
+</activityRootModel>

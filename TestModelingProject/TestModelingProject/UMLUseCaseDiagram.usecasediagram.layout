@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UMLUseCaseDiagram">
+  <useCaseModelRootMoniker Id="f2df0e8b-d8b6-4159-a1ef-f55ae94cb7f4" />
+  <nestedChildShapes>
+    <actorShape Id="9d4f44c6-43d5-476a-81c2-6e438a542a2a" absoluteBounds="0.875, 3.5, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="a3a9cb11-3db0-4dc0-9ac7-2817f29ce549" LastKnownName="Customer" />
+      <relativeChildShapes />
+    </actorShape>
+    <SubsystemShape Id="8622d367-5163-449b-b4a7-7bdb430f58df" absoluteBounds="1.75, 2.25, 3, 2.625" customColor="White">
+      <subsystemMoniker Id="6ca05051-4f11-49f9-9296-4ac0e13ae3f0" LastKnownName="Webshop" />
+      <nestedChildShapes>
+        <useCaseShape Id="454847c8-da48-4d19-b1a1-04b7180e3140" absoluteBounds="2.75, 3.5, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="bb9c1a76-cd31-44bd-85e7-8eca814727be" LastKnownName="Place order" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="4d73dc49-8eba-45b9-89df-04decfc8b7bd" absoluteBounds="2.75, 2.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="a98d5752-a429-4c4b-9cfc-001b8dbf5f66" LastKnownName="Search for products" />
+          <relativeChildShapes />
+        </useCaseShape>
+      </nestedChildShapes>
+    </SubsystemShape>
+    <useCaseAssociationConnector edgePoints="[(1.375 : 3.66176470588235); (2.84151606836762 : 3.14417079939966)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="29961dd3-e1be-42bc-bc8d-326ce8d87cd3" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="9d4f44c6-43d5-476a-81c2-6e438a542a2a" />
+        <useCaseShapeMoniker Id="4d73dc49-8eba-45b9-89df-04decfc8b7bd" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseAssociationConnector edgePoints="[(1.375 : 3.75); (2.75 : 3.75)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="cb9230fd-f4fa-44f8-b135-b2d95863199f" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="9d4f44c6-43d5-476a-81c2-6e438a542a2a" />
+        <useCaseShapeMoniker Id="454847c8-da48-4d19-b1a1-04b7180e3140" />
+      </nodes>
+    </useCaseAssociationConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

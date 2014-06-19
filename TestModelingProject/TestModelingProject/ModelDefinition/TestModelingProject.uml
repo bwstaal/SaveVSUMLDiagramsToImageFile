@@ -1,0 +1,712 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+  dslVersion="1.0.0.0"
+  Id="40f9a903-40e0-40a6-bcc0-676063fffb74"
+  name="TestModelingProject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="34711a99-c709-4180-9a0f-b7dfb9b4e870"
+        name="Person"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="d0f95d41-9a25-4f4a-9be4-612d25474854"
+            isDerived="false"
+            sourceEndRoleName="Person"
+            targetEndRoleName="Address"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="ab3854e1-e0d9-4a4b-990b-bd96cad87703"
+              LastKnownName="Address"
+              LastKnownLocation="TestModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d402422d-cced-4253-b5a8-2281084b00bd"
+                  name="Person"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="33fa9874-ba42-477b-97b4-5fac608e2c58"
+                  name="Address"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="d296f218-d35d-4df1-9094-6ab17eaf3858"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="TestModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="77ea56d7-d161-4ba0-b9da-84bc92b3b4ba"
+            name="FirstName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="TestModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="457ec208-fddc-49f7-9a8d-050569d7f79c"
+            name="LastName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="TestModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="19a34db3-2874-4372-be37-3b2a17685785"
+            name="Age"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="TestModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ab3854e1-e0d9-4a4b-990b-bd96cad87703"
+        name="Address"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="1309483a-8cd6-43ce-8b26-555d4216b5ec"
+            name="Street"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="TestModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="47818594-e8e1-424d-ba41-2cea7b02ef4f"
+            name="Number"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="TestModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6a81e3b4-cc40-48fa-90d7-2d03f1ca0199"
+            name="City"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="TestModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="baed5467-41bc-48c7-862b-bbace2dcd89f"
+            name="Country"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="TestModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="2a5312ba-af98-45f6-9a5e-2d0d9499332c"
+        name="Sequence"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="92c568c2-4de5-441f-b254-c3bee14e48fd"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d2396a24-1dcd-4585-bff6-20fae3150f37"
+                LastKnownName="Class 2"
+                LastKnownLocation="TestModelingProject.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="ab91a51c-1d06-4f4e-b506-4657e40c91c6"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="TestModelingProject.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="3f042ef1-d994-4799-b067-ab264e5ee7dd"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="TestModelingProject.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="f17db087-f02a-4d58-85f8-4466df996f4b"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="TestModelingProject.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="2af81e7c-8904-472c-96e7-c94dd60efbda"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="TestModelingProject.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="3f042ef1-d994-4799-b067-ab264e5ee7dd"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="4afa3089-70fb-4895-88ae-2286f44477a0"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TestModelingProject.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d2396a24-1dcd-4585-bff6-20fae3150f37"
+                LastKnownName="Class 2"
+                LastKnownLocation="TestModelingProject.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="92f84f2c-56ca-4bf8-9f2f-bab7eabdd31b"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="126483c9-3d58-448b-9bdd-e31f22a93b7f"
+                LastKnownName="Class 1"
+                LastKnownLocation="TestModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f17db087-f02a-4d58-85f8-4466df996f4b"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="d2396a24-1dcd-4585-bff6-20fae3150f37"
+                LastKnownName="Class 2"
+                LastKnownLocation="TestModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2af81e7c-8904-472c-96e7-c94dd60efbda"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="d2396a24-1dcd-4585-bff6-20fae3150f37"
+                LastKnownName="Class 2"
+                LastKnownLocation="TestModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b1fe69e5-a527-4dd6-b3cd-0f03d23187db"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="126483c9-3d58-448b-9bdd-e31f22a93b7f"
+                LastKnownName="Class 1"
+                LastKnownLocation="TestModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="ab91a51c-1d06-4f4e-b506-4657e40c91c6"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="aee6375e-a93c-438f-a58c-183309766c49"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TestModelingProject.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d2396a24-1dcd-4585-bff6-20fae3150f37"
+                LastKnownName="Class 2"
+                LastKnownLocation="TestModelingProject.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="126483c9-3d58-448b-9bdd-e31f22a93b7f"
+            name="Class 1"
+            isActor="false"
+            lifelineDisplayName="Class 1">
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="92f84f2c-56ca-4bf8-9f2f-bab7eabdd31b"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="TestModelingProject.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="b1fe69e5-a527-4dd6-b3cd-0f03d23187db"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="TestModelingProject.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="d2396a24-1dcd-4585-bff6-20fae3150f37"
+            name="Class 2"
+            isActor="false"
+            lifelineDisplayName="Class 2">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="3f042ef1-d994-4799-b067-ab264e5ee7dd"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="TestModelingProject.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="ab91a51c-1d06-4f4e-b506-4657e40c91c6"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="TestModelingProject.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="e2713c3a-23ed-4604-a36c-836e7bca77d7"
+            name="&lt;&lt;create&gt;&gt;"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="92f84f2c-56ca-4bf8-9f2f-bab7eabdd31b"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="TestModelingProject.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f17db087-f02a-4d58-85f8-4466df996f4b"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="TestModelingProject.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="dfc527ca-0c37-4ecc-a042-f65aaa6c981b"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2af81e7c-8904-472c-96e7-c94dd60efbda"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="TestModelingProject.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b1fe69e5-a527-4dd6-b3cd-0f03d23187db"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="TestModelingProject.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="4afa3089-70fb-4895-88ae-2286f44477a0"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="aee6375e-a93c-438f-a58c-183309766c49"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="bc97f18c-c9a5-4f57-9412-9fc80ecfeee7"
+        name="Webshop"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="abe8bc63-1d70-4608-aea3-d01f68f08637"
+        name="Place order"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="bc97f18c-c9a5-4f57-9412-9fc80ecfeee7"
+            LastKnownName="Webshop"
+            LastKnownLocation="TestModelingProject.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="96dba4e8-e424-4ff4-92ff-b4fbdd61018f"
+        name="Customer"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="e0ffbec0-70bf-4359-a6fa-3576ec3933a8"
+            isDerived="false"
+            sourceEndRoleName="Customer"
+            targetEndRoleName="Search for products"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="32605c10-0498-4135-9539-05c6431b773d"
+              LastKnownName="Search for products"
+              LastKnownLocation="TestModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ea0ccfe0-de0d-4501-8521-c87652c4efe7"
+                  name="Customer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e2c047e3-74e3-4c2d-b33d-ae6b0274ce62"
+                  name="Search for products"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8cef109d-aa34-480b-8457-c634ad5940d2"
+            isDerived="false"
+            sourceEndRoleName="Customer"
+            targetEndRoleName="Place order"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="abe8bc63-1d70-4608-aea3-d01f68f08637"
+              LastKnownName="Place order"
+              LastKnownLocation="TestModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6e7575b4-96d2-4f95-ab55-4c2d1ab8b5ae"
+                  name="Customer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a4064287-4f96-4ef6-839d-87a9066473bf"
+                  name="Place order"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="32605c10-0498-4135-9539-05c6431b773d"
+        name="Search for products"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="bc97f18c-c9a5-4f57-9412-9fc80ecfeee7"
+            LastKnownName="Webshop"
+            LastKnownLocation="TestModelingProject.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="537ab665-bfa1-418b-bb2c-c9395005f0c0"
+        name="Activity"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="09a185af-adbe-4e36-b30c-7cdfc0832df9"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="52d3cb82-d639-4d71-9251-bbaaa4171238"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="ff68c57b-95db-4aeb-a0b2-6c00df6725c3"
+                  LastKnownName="Have an idea"
+                  LastKnownLocation="TestModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="ff68c57b-95db-4aeb-a0b2-6c00df6725c3"
+            name="Have an idea"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="80b126b1-2e22-41ca-8be4-2ace18687d98"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="e242b273-8938-4cb3-b89b-e607f9bca44c"
+                  LastKnownName="Make a design"
+                  LastKnownLocation="TestModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="e242b273-8938-4cb3-b89b-e607f9bca44c"
+            name="Make a design"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="62cf6432-92b3-45cd-982a-bfe1abe8081b"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="96f93f8d-8c04-40c6-8aea-cf78da54a216"
+                  LastKnownName="Implement the design"
+                  LastKnownLocation="TestModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="96f93f8d-8c04-40c6-8aea-cf78da54a216"
+            name="Implement the design"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="65ff79c2-58d1-47fc-bd89-2bc543e98287"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="4441dfec-1f47-4230-8a90-12d071330f90"
+                  LastKnownName="Test the design"
+                  LastKnownLocation="TestModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="4441dfec-1f47-4230-8a90-12d071330f90"
+            name="Test the design"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d8f9b2e2-4484-49b4-96ac-7f17ae9bef75"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="3eade403-a919-4982-8c45-c26b9a327492"
+                  LastKnownName="Ship it"
+                  LastKnownLocation="TestModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="3eade403-a919-4982-8c45-c26b9a327492"
+            name="Ship it"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="59fe5977-95a1-46db-8ecc-476bc876ab67"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="92b7b196-37b5-4ee8-8b0c-8ae6f1437a52"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="TestModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="92b7b196-37b5-4ee8-8b0c-8ae6f1437a52"
+            name="ActivityFinal1"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="6755bcc2-5cf7-46da-ad84-45d4b8593708"
+        name="Webshop"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="a7b82ddb-033c-4a9c-b29c-7c89de912f1c">
+            <componentMoniker
+              Id="d41c81f8-5ad4-4067-9c0c-f1494c2608a4"
+              LastKnownName="Customer"
+              LastKnownLocation="TestModelingProject.uml" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="d41c81f8-5ad4-4067-9c0c-f1494c2608a4"
+        name="Customer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

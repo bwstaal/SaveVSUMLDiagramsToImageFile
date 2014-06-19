@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="d7ccc244-ed80-4113-8ffc-7d1853b86d80" Version="1.0" Language="en-US" Publisher="B.W. Staal" />
-    <DisplayName>Save UML Diagram To Image Files</DisplayName>
+    <Identity Id="SaveUMLDiagramToImageFileVsix..aa834720-b853-4158-91de-eed40652e2d4" Version="1.0" Language="en-US" Publisher="B.W. Staal" />
+    <DisplayName>Save UML Diagram To Image File</DisplayName>
     <Description xml:space="preserve">Save UML Diagrams To Image Files
 This extension adds the possibility to save UML diagrams, created in Visual Studio Ultimate to the image formats: png, jpg, emf and bmp.
 Supported UML diagrams are:
@@ -17,14 +17,14 @@ This extension is the implementation of the code shown in the MSDN article "How 
 A version that is compatible with the 2012 edition (created by Lazzarotto Fabrizio) can be found here: http://visualstudiogallery.msdn.microsoft.com/e797d512-9a59-4819-b713-b5972b02ce81</Description>
     <Tags>Modeling, Diagrams, UML, Architecture</Tags>
   </Metadata>
-  <Installation InstalledByMsi="false" AllUsers="true">
-    <InstallationTarget Id="Microsoft.VisualStudio.Ultimate" Version="12.0" />
+  <Installation AllUsers="true">
+    <InstallationTarget Id="Microsoft.VisualStudio.Ultimate" Version="[12.0]" />
   </Installation>
   <Dependencies>
-    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="4.5" />
-    <Dependency Id="Microsoft.VisualStudio.MPF.12.0" DisplayName="Visual Studio MPF 12.0" d:Source="Installed" Version="[12.0,13.0)" d:InstallSource="Download" />
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    <Dependency d:Source="Installed" Id="Microsoft.VisualStudio.MPF.12.0" DisplayName="Visual Studio MPF 12.0" Version="[12.0,13.0)" d:InstallSource="Download" />
   </Dependencies>
   <Assets>
-    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="SaveUMLDiagramToImageFileCommandExtension" Path="|SaveUMLDiagramToImageFileCommandExtension|" />
   </Assets>
 </PackageManifest>

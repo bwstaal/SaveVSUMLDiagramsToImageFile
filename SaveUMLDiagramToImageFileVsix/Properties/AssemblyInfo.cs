@@ -5,11 +5,11 @@ using System.Resources;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SaveUMLDiagramToImageFileCommandExtension")]
-[assembly: AssemblyDescription("This extension adds the possibility to save UML diagrams, created in Visual Studio Ultimate to the image formats: png, jpg, emf and bmp.")]
+[assembly: AssemblyTitle("SaveUMLDiagramToImageFileVsix")]
+[assembly: AssemblyDescription("The Vsix file for the Save UML Diagram To Image File Extension")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SaveUMLDiagramToImageFileCommandExtension")]
+[assembly: AssemblyProduct("SaveUMLDiagramToImageFileVsix")]
 [assembly: AssemblyCopyright("Copyright © B.W. Staal  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

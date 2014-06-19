@@ -10,6 +10,7 @@ using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation;
 // for IDiagramContext
 using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml;
+using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer;
 // for designer extension attributes
 
 namespace SaveUMLDiagramToImageFileCommandExtension
@@ -24,6 +25,7 @@ namespace SaveUMLDiagramToImageFileCommandExtension
     [SequenceDesignerExtension]
     [ComponentDesignerExtension]
     [ActivityDesignerExtension]
+    [LayerDesignerExtension]
     class CommandExtension : ICommandExtension
     {
         [Import]

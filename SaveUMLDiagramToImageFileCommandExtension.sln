@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveUMLDiagramToImageFileCommandExtension", "SaveUMLDiagramToImageFileCommandExtension\SaveUMLDiagramToImageFileCommandExtension.csproj", "{69F636DD-73BD-4C7B-9846-7BDA4D3B168D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveUMLDiagramToImageFileVsix", "SaveUMLDiagramToImageFileVsix\SaveUMLDiagramToImageFileVsix.csproj", "{A64DBC14-3274-4CA2-98E3-9F5B531606FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{69F636DD-73BD-4C7B-9846-7BDA4D3B168D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69F636DD-73BD-4C7B-9846-7BDA4D3B168D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69F636DD-73BD-4C7B-9846-7BDA4D3B168D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A64DBC14-3274-4CA2-98E3-9F5B531606FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A64DBC14-3274-4CA2-98E3-9F5B531606FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A64DBC14-3274-4CA2-98E3-9F5B531606FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A64DBC14-3274-4CA2-98E3-9F5B531606FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

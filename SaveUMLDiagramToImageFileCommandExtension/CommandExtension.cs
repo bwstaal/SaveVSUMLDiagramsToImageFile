@@ -3,15 +3,13 @@ using System.Drawing; // for Bitmap
 using System.Drawing.Imaging; // for ImageFormat
 using System.Linq; // for collection extensions
 using System.Windows.Forms; // for SaveFileDialog
-using Microsoft.VisualStudio.Modeling.Diagrams;
-// for Diagram
-using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
-// for IGestureExtension, ICommandExtension, ILinkedUndoContext
-using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation;
-// for IDiagramContext
+using Microsoft.VisualStudio.Modeling.Diagrams; // for Diagram
+using Microsoft.VisualStudio.Modeling.ExtensionEnablement; // for IGestureExtension, ICommandExtension, ILinkedUndoContext
+using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation; // for IDiagramContext
+
+// for designer extension attributes
 using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml;
 using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer;
-// for designer extension attributes
 
 namespace SaveUMLDiagramToImageFileCommandExtension
 {

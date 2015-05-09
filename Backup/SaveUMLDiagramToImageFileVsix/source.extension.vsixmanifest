@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="SaveUMLDiagramToImageFileVsix..aa834720-b853-4158-91de-eed40652e2d4" Version="1.0" Language="en-US" Publisher="B.W. Staal" />
+    <DisplayName>Save UML Diagram To Image File</DisplayName>
+    <Description xml:space="preserve">Save UML Diagrams To Image Files</Description>
+    <PreviewImage>PreviewImage.png</PreviewImage>
+    <Tags>Modeling, Diagrams, UML, Architecture</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Ultimate" Version="[12.0]" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    <Dependency d:Source="Installed" Id="Microsoft.VisualStudio.MPF.12.0" DisplayName="Visual Studio MPF 12.0" Version="[12.0,13.0)" d:InstallSource="Download" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="SaveUMLDiagramToImageFileCommandExtension" Path="|SaveUMLDiagramToImageFileCommandExtension|" />
+  </Assets>
+</PackageManifest>

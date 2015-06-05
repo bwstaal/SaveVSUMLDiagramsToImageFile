@@ -2,8 +2,8 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
     <Identity Id="SaveUMLDiagramToImageFileVsix..aa834720-b853-4158-91de-eed40652e2d4" Version="1.0" Language="en-US" Publisher="B.W. Staal" />
-    <DisplayName>Save UML Diagram To Image File</DisplayName>
-    <Description xml:space="preserve">Save UML Diagrams To Image Files</Description>
+    <DisplayName>Save UML Diagram To Image File 2013</DisplayName>
+    <Description xml:space="preserve">Save UML Diagrams To Image Files for Visual Studio 2013 Ultimate</Description>
     <PreviewImage>PreviewImage.png</PreviewImage>
     <Tags>Modeling, Diagrams, UML, Architecture</Tags>
   </Metadata>

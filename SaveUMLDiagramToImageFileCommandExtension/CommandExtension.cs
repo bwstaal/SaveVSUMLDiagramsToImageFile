@@ -24,7 +24,7 @@ namespace SaveUMLDiagramToImageFileCommandExtension
     [ComponentDesignerExtension]
     [ActivityDesignerExtension]
     [LayerDesignerExtension]
-    class CommandExtension : ICommandExtension
+    public class CommandExtension : ICommandExtension
     {
         [Import]
         IDiagramContext Context { get; set; }

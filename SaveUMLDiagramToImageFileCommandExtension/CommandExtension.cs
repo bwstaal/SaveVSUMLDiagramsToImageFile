@@ -7,6 +7,7 @@ using System.Windows.Forms; // for SaveFileDialog
 using Microsoft.VisualStudio.Modeling.Diagrams; // for Diagram
 using Microsoft.VisualStudio.Modeling.ExtensionEnablement; // for IGestureExtension, ICommandExtension, ILinkedUndoContext
 using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation; // for IDiagramContext
+using Microsoft.VisualStudio.TeamArchitect.UseCaseDesigner;
 
 // for designer extension attributes
 using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml;
@@ -38,13 +39,30 @@ namespace SaveUMLDiagramToImageFileCommandExtension
             Diagram dslDiagram = Context.CurrentDiagram.GetObject<Diagram>();
             if (dslDiagram != null)
             {
-                string imageFileName = FileNameFromUser();
+                var type = dslDiagram.ModelElement.GetType();
+                var model = dslDiagram.ModelElement as UseCaseModelRoot;
+                SaveFileDialog dialog = GetSaveDialog();
+                dialog.FileName = model.Name;
+                string imageFileName = dialog.ShowDialog() == DialogResult.OK ? dialog.FileName : null;
                 if (!string.IsNullOrEmpty(imageFileName))
                 {
-                    Bitmap bitmap = dslDiagram.CreateBitmap(
-                     dslDiagram.NestedChildShapes,
-                     Diagram.CreateBitmapPreference.FavorClarityOverSmallSize);
-                    bitmap.Save(imageFileName, GetImageType(imageFileName));
+                    switch (dialog.FilterIndex)
+                    {
+                        case 1:
+                        case 2:
+                        case 4:
+                            Bitmap bitmap = dslDiagram.CreateBitmap(
+                             dslDiagram.NestedChildShapes,
+                             Diagram.CreateBitmapPreference.FavorClarityOverSmallSize);
+                            bitmap.Save(imageFileName, GetImageType(imageFileName));
+                            break;
+                        case 3:
+                            Metafile metafile = dslDiagram.CreateMetafile(
+                             dslDiagram.NestedChildShapes);
+                            metafile.Save(imageFileName, GetImageType(imageFileName));
+                            break;
+                    }
+
                 }
             }
         }
@@ -68,18 +86,6 @@ namespace SaveUMLDiagramToImageFileCommandExtension
             get { return "Save To Image..."; }
         }
 
-
-        /// <summary>
-        /// Ask the user for the path of an image file.
-        /// </summary>
-        /// <returns>image file path, or null</returns>
-        private string FileNameFromUser()
-        {
-            SaveFileDialog dialog = GetSaveDialog();
-            dialog.FileName = Context.CurrentDiagram.Name;
-            return dialog.ShowDialog() == DialogResult.OK ? dialog.FileName : null;
-        }
-
         private static SaveFileDialog GetSaveDialog()
         {
             SaveFileDialog dialog;
@@ -93,12 +99,14 @@ namespace SaveUMLDiagramToImageFileCommandExtension
 
         private static SaveFileDialog CreateSaveDialog()
         {
-            SaveFileDialog dialog = new SaveFileDialog();
-            dialog.AddExtension = true;
-            dialog.DefaultExt = "image.bmp";
-            dialog.Filter = "Bitmap ( *.bmp )|*.bmp|JPEG File ( *.jpg )|*.jpg|Enhanced Metafile (*.emf )|*.emf|Portable Network Graphic ( *.png )|*.png";
-            dialog.FilterIndex = 1;
-            dialog.Title = "Save Diagram to Image";
+            SaveFileDialog dialog = new SaveFileDialog
+            {
+                AddExtension = true,
+                DefaultExt = "image.jpg",
+                Filter = "JPEG File (*.jpg)|*.jpg|Portable Network Graphic (*.png)|*.png|Enhanced Metafile (*.emf)|*.emf|Bitmap (*.bmp)|*.bmp",
+                FilterIndex = 1,
+                Title = "Save Diagram to Image"
+            };
             return dialog;
         }
 
@@ -107,10 +115,10 @@ namespace SaveUMLDiagramToImageFileCommandExtension
         /// </summary>
         /// <param name="fileName"></param>
         /// <returns></returns>
-        private ImageFormat GetImageType(string fileName)
+        private static ImageFormat GetImageType(string fileName)
         {
             string extension = System.IO.Path.GetExtension(fileName).ToLowerInvariant();
-            ImageFormat result = ImageFormat.Bmp;
+            ImageFormat result;
             switch (extension)
             {
                 case ".jpg":
@@ -121,6 +129,12 @@ namespace SaveUMLDiagramToImageFileCommandExtension
                     break;
                 case ".png":
                     result = ImageFormat.Png;
+                    break;
+                case ".bmp":
+                    result = ImageFormat.Bmp;
+                    break;
+                default:
+                    result = ImageFormat.Jpeg;
                     break;
             }
             return result;

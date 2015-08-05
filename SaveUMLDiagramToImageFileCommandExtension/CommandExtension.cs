@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.Composition; // for [Import], [Export]
+﻿using System;
+using System.ComponentModel.Composition; // for [Import], [Export]
 using System.Drawing; // for Bitmap
 using System.Drawing.Imaging; // for ImageFormat
 using System.Linq; // for collection extensions
@@ -16,7 +17,7 @@ namespace SaveUMLDiagramToImageFileCommandExtension
     /// <summary>
     /// Called when the user clicks the menu item.
     /// </summary>
-    // Context menu command applicable to any UML diagram 
+    // Context menu command applicable to any UML diagram
     [Export(typeof(ICommandExtension))]
     [ClassDesignerExtension]
     [UseCaseDesignerExtension]
@@ -26,6 +27,8 @@ namespace SaveUMLDiagramToImageFileCommandExtension
     [LayerDesignerExtension]
     public class CommandExtension : ICommandExtension
     {
+        private static WeakReference<SaveFileDialog> saveDialogReference = new WeakReference<SaveFileDialog>(null);
+
         [Import]
         IDiagramContext Context { get; set; }
 
@@ -72,13 +75,31 @@ namespace SaveUMLDiagramToImageFileCommandExtension
         /// <returns>image file path, or null</returns>
         private string FileNameFromUser()
         {
+            SaveFileDialog dialog = GetSaveDialog();
+            dialog.FileName = Context.CurrentDiagram.Name;
+            return dialog.ShowDialog() == DialogResult.OK ? dialog.FileName : null;
+        }
+
+        private static SaveFileDialog GetSaveDialog()
+        {
+            SaveFileDialog dialog;
+            if (!saveDialogReference.TryGetTarget(out dialog))
+            {
+                dialog = CreateSaveDialog();
+                saveDialogReference.SetTarget(dialog);
+            }
+            return dialog;
+        }
+
+        private static SaveFileDialog CreateSaveDialog()
+        {
             SaveFileDialog dialog = new SaveFileDialog();
             dialog.AddExtension = true;
             dialog.DefaultExt = "image.bmp";
             dialog.Filter = "Bitmap ( *.bmp )|*.bmp|JPEG File ( *.jpg )|*.jpg|Enhanced Metafile (*.emf )|*.emf|Portable Network Graphic ( *.png )|*.png";
             dialog.FilterIndex = 1;
             dialog.Title = "Save Diagram to Image";
-            return dialog.ShowDialog() == DialogResult.OK ? dialog.FileName : null;
+            return dialog;
         }
 
         /// <summary>

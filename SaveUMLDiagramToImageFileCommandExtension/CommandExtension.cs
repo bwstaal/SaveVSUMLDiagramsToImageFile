@@ -7,11 +7,11 @@ using System.Windows.Forms; // for SaveFileDialog
 using Microsoft.VisualStudio.Modeling.Diagrams; // for Diagram
 using Microsoft.VisualStudio.Modeling.ExtensionEnablement; // for IGestureExtension, ICommandExtension, ILinkedUndoContext
 using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation; // for IDiagramContext
-using Microsoft.VisualStudio.TeamArchitect.UseCaseDesigner;
 
 // for designer extension attributes
 using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml;
 using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer;
+using Microsoft.VisualStudio.Uml.Diagrams;
 
 namespace SaveUMLDiagramToImageFileCommandExtension
 {
@@ -40,7 +40,7 @@ namespace SaveUMLDiagramToImageFileCommandExtension
             if (dslDiagram != null)
             {
                 var type = dslDiagram.ModelElement.GetType();
-                var model = dslDiagram.ModelElement as UseCaseModelRoot;
+                var model = dslDiagram.ModelElement as RootModel;
                 SaveFileDialog dialog = GetSaveDialog();
                 dialog.FileName = model.Name;
                 string imageFileName = dialog.ShowDialog() == DialogResult.OK ? dialog.FileName : null;
@@ -102,7 +102,7 @@ namespace SaveUMLDiagramToImageFileCommandExtension
             SaveFileDialog dialog = new SaveFileDialog
             {
                 AddExtension = true,
-                DefaultExt = "image.jpg",
+                //DefaultExt = "image.jpg",
                 Filter = "JPEG File (*.jpg)|*.jpg|Portable Network Graphic (*.png)|*.png|Enhanced Metafile (*.emf)|*.emf|Bitmap (*.bmp)|*.bmp",
                 FilterIndex = 1,
                 Title = "Save Diagram to Image"

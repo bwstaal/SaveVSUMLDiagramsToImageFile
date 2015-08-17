@@ -1,14 +1,12 @@
 ﻿using System;
-using System.ComponentModel.Composition; // for [Import], [Export]
-using System.Drawing; // for Bitmap
-using System.Drawing.Imaging; // for ImageFormat
-using System.Linq; // for collection extensions
-using System.Windows.Forms; // for SaveFileDialog
-using Microsoft.VisualStudio.Modeling.Diagrams; // for Diagram
-using Microsoft.VisualStudio.Modeling.ExtensionEnablement; // for IGestureExtension, ICommandExtension, ILinkedUndoContext
-using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation; // for IDiagramContext
-
-// for designer extension attributes
+using System.ComponentModel.Composition;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.Linq; 
+using System.Windows.Forms;
+using Microsoft.VisualStudio.Modeling.Diagrams;
+using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
+using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation;
 using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml;
 using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer;
 using Microsoft.VisualStudio.Uml.Diagrams;
@@ -28,7 +26,7 @@ namespace SaveUMLDiagramToImageFileCommandExtension
     [LayerDesignerExtension]
     public class CommandExtension : ICommandExtension
     {
-        private static WeakReference<SaveFileDialog> saveDialogReference = new WeakReference<SaveFileDialog>(null);
+        private static WeakReference<SaveFileDialog> _saveDialogReference = new WeakReference<SaveFileDialog>(null);
 
         [Import]
         IDiagramContext Context { get; set; }
@@ -37,33 +35,35 @@ namespace SaveUMLDiagramToImageFileCommandExtension
         {
             // Get the diagram of the underlying implementation.
             Diagram dslDiagram = Context.CurrentDiagram.GetObject<Diagram>();
-            if (dslDiagram != null)
-            {
-                var type = dslDiagram.ModelElement.GetType();
-                var model = dslDiagram.ModelElement as RootModel;
-                SaveFileDialog dialog = GetSaveDialog();
-                dialog.FileName = model.Name;
-                string imageFileName = dialog.ShowDialog() == DialogResult.OK ? dialog.FileName : null;
-                if (!string.IsNullOrEmpty(imageFileName))
-                {
-                    switch (dialog.FilterIndex)
-                    {
-                        case 1:
-                        case 2:
-                        case 4:
-                            Bitmap bitmap = dslDiagram.CreateBitmap(
-                             dslDiagram.NestedChildShapes,
-                             Diagram.CreateBitmapPreference.FavorClarityOverSmallSize);
-                            bitmap.Save(imageFileName, GetImageType(imageFileName));
-                            break;
-                        case 3:
-                            Metafile metafile = dslDiagram.CreateMetafile(
-                             dslDiagram.NestedChildShapes);
-                            metafile.Save(imageFileName, GetImageType(imageFileName));
-                            break;
-                    }
+            if (dslDiagram == null) return;
 
+            //var type = dslDiagram.ModelElement.GetType();
+            var model = dslDiagram.ModelElement as RootModel;
+            SaveFileDialog dialog = GetSaveDialog();
+
+            if (model != null)
+                dialog.FileName = model.Name;
+
+            string imageFileName = dialog.ShowDialog() == DialogResult.OK ? dialog.FileName : null;
+            if (!string.IsNullOrEmpty(imageFileName))
+            {
+                switch (dialog.FilterIndex)
+                {
+                    case 1:
+                    case 2:
+                    case 4:
+                        Bitmap bitmap = dslDiagram.CreateBitmap(
+                            dslDiagram.NestedChildShapes,
+                            Diagram.CreateBitmapPreference.FavorClarityOverSmallSize);
+                        bitmap.Save(imageFileName, GetImageType(imageFileName));
+                        break;
+                    case 3:
+                        Metafile metafile = dslDiagram.CreateMetafile(
+                            dslDiagram.NestedChildShapes);
+                        metafile.Save(imageFileName, GetImageType(imageFileName));
+                        break;
                 }
+
             }
         }
 
@@ -74,8 +74,7 @@ namespace SaveUMLDiagramToImageFileCommandExtension
         /// <param name="command"></param>
         public void QueryStatus(IMenuCommand command)
         {
-            command.Enabled = Context.CurrentDiagram != null
-              && Context.CurrentDiagram.ChildShapes.Count() > 0;
+            command.Enabled = Context.CurrentDiagram != null && Context.CurrentDiagram.ChildShapes.Any();
         }
 
         /// <summary>
@@ -89,10 +88,10 @@ namespace SaveUMLDiagramToImageFileCommandExtension
         private static SaveFileDialog GetSaveDialog()
         {
             SaveFileDialog dialog;
-            if (!saveDialogReference.TryGetTarget(out dialog))
+            if (!_saveDialogReference.TryGetTarget(out dialog))
             {
                 dialog = CreateSaveDialog();
-                saveDialogReference.SetTarget(dialog);
+                _saveDialogReference.SetTarget(dialog);
             }
             return dialog;
         }
@@ -102,7 +101,6 @@ namespace SaveUMLDiagramToImageFileCommandExtension
             SaveFileDialog dialog = new SaveFileDialog
             {
                 AddExtension = true,
-                //DefaultExt = "image.jpg",
                 Filter = "JPEG File (*.jpg)|*.jpg|Portable Network Graphic (*.png)|*.png|Enhanced Metafile (*.emf)|*.emf|Bitmap (*.bmp)|*.bmp",
                 FilterIndex = 1,
                 Title = "Save Diagram to Image"

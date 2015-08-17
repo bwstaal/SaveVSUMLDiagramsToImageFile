@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="SaveUMLDiagramToImageFileVsix..a12b9c07-046c-4557-94c2-a8eded7d1c5c" Version="1.0" Language="en-US" Publisher="B.W. Staal" />
+    <Identity Id="SaveUMLDiagramToImageFileVsix..a12b9c07-046c-4557-94c2-a8eded7d1c5c" Version="1.1" Language="en-US" Publisher="B.W. Staal" />
     <DisplayName>Save UML Diagram To Image File 2015</DisplayName>
     <Description xml:space="preserve">Save UML Diagrams To Image Files for Visual Studio 2015 Enterprise</Description>
     <PreviewImage>PreviewImage.png</PreviewImage>

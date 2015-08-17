@@ -6,11 +6,11 @@ using System.Resources;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("SaveUMLDiagramToImageFileCommandExtension")]
-[assembly: AssemblyDescription("This extension adds the possibility to save UML diagrams, created in Visual Studio Ultimate to the image formats: png, jpg, emf and bmp.")]
+[assembly: AssemblyDescription("This extension adds the possibility to save UML diagrams, created in Visual Studio Enterprise to the image formats: png, jpg, emf and bmp.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("SaveUMLDiagramToImageFileCommandExtension")]
-[assembly: AssemblyCopyright("Copyright © B.W. Staal  2014")]
+[assembly: AssemblyCopyright("Copyright © B.W. Staal 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -29,6 +29,6 @@ using System.Resources;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.1.0.0")]
+[assembly: AssemblyFileVersion("1.1.0.0")]
 [assembly: NeutralResourcesLanguageAttribute("en-US")]

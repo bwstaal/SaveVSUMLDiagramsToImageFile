@@ -12,5 +12,9 @@ This extension can be downloaded from the Visual Studio Gallery.
 - [2013 Version](http://visualstudiogallery.msdn.microsoft.com/f13d917d-0e67-4f3e-bdb7-d08046553951)
 - [2015 Version](https://visualstudiogallery.msdn.microsoft.com/ac24086a-96dd-45ae-ad38-324c3f0233c3)
 
+# No Visual Studio 2017 support #
+Unfortunately there will be no support for Visual Studio 2017, because Microsoft decided to remove the UML designers and also the UML extensibility support in the Modeling SDK.
+For information can be found [here](https://blogs.msdn.microsoft.com/devops/2016/10/14/uml-designers-have-been-removed-layer-designer-now-supports-live-architectural-analysis/) and [here](https://docs.microsoft.com/en-us/visualstudio/modeling/what-s-new-for-design-in-visual-studio#uml-designers-have-been-removed).
+
 # License #
 This extension is released under the [MIT](https://github.com/bwstaal/SaveVSUMLDiagramsToImageFile/blob/develop/LICENSE.txt) license.
